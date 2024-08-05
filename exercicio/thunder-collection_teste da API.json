@@ -1,0 +1,59 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "teste da API",
+    "collectionId": "21568bef-0dff-4938-9c5d-8d3b7bd952e2",
+    "dateExported": "2024-08-05T13:55:01.593Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "27f4b9c1-c9e3-4451-bd0b-032b9486dd23",
+            "colId": "21568bef-0dff-4938-9c5d-8d3b7bd952e2",
+            "containerId": "",
+            "name": "Teste requisição GET",
+            "url": "http://localhost/exercicio/api.php",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-08-05T12:28:58.111Z",
+            "modified": "2024-08-05T12:29:37.779Z",
+            "headers": []
+        },
+        {
+            "_id": "393ec3f0-cc94-4125-ad6d-60425d9fd84c",
+            "colId": "21568bef-0dff-4938-9c5d-8d3b7bd952e2",
+            "containerId": "",
+            "name": "Teste requisição POST",
+            "url": "localhost/exercicio/api.php",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-08-05T12:31:07.513Z",
+            "modified": "2024-08-05T12:31:18.250Z",
+            "headers": []
+        },
+        {
+            "_id": "e01fdf7c-6859-4cb5-8a4b-18f843c6ed11",
+            "colId": "21568bef-0dff-4938-9c5d-8d3b7bd952e2",
+            "containerId": "",
+            "name": "Teste requisição PUT",
+            "url": "localhost/exercicio/api.php",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-08-05T12:32:02.802Z",
+            "modified": "2024-08-05T12:32:34.429Z",
+            "headers": []
+        },
+        {
+            "_id": "314617ef-2de9-4787-adb1-ab3fdcf810d2",
+            "colId": "21568bef-0dff-4938-9c5d-8d3b7bd952e2",
+            "containerId": "",
+            "name": "Teste requisição DELETE",
+            "url": "localhost/exercicio/api.php",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-08-05T12:32:47.944Z",
+            "modified": "2024-08-05T12:32:56.716Z",
+            "headers": []
+        }
+    ],
+    "ref": "8mqKkC4WcCpgdVeBLy057gykYtwhAx5jPYzT8b4DWRaG9AzlEITuG-uK65Fab5WQHRSQGRRRZxr5tIEggHVdbQ"
+}
