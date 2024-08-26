@@ -151,6 +151,107 @@
 
         
     }
+    
+    function insere_curso(){
+        global $conexao;
+
+        $nome_curso = $_GET['nome_curso'];
+
+        $sql = "INSERT INTO cursos (nome_curso) VALUES ('$nome_curso')";
+
+        if($conexao->query($sql) == TRUE) {
+            echo json_encode([
+                'mensagem' => 'CURSO CADASTRADO COM SUCESSO'
+            ]);
+        }
+        else {
+            echo json_encode([
+                'mensagem' => 'ERRO NO CADASTRO DO CURSO'
+            ]);
+        }
+    }
+
+    function insere_aluno(){
+        global $conexao;
+        $input = json_decode(file_get_contents('php://input'), true);
+        $id = $input['id'];
+        $nome = $input['nome'];
+        $email = $input['email'];
+
+        $sql = "INSERT INTO alunos (nome,email,fk_cursos_id_curso) VALUES ('$nome','$email','$id_curso')";
+
+        if($conexao->query($sql) == TRUE) {
+            echo json_encode([
+                'mensagem' => 'ALUNO CADASTRADO COM SUCESSO'
+            ]);
+        }
+        else {
+            echo json_encode([
+                'mensagem' => 'ERRO NO CADASTRO DO ALUNO'
+            ]);
+        }
+    }
+
+    function atualiza_aluno(){
+        global $conexao;
+
+        $input = json_decode(file_get_contents('php://input'), true);
+        $id_curso = $input['fk_cursos_id_curso'];
+        $nome_novo = $input['nome_novo'];
+        $email_novo = $input['email_novo'];
+
+        $sql = "UPDATE alunos SET nome = '$nome_novo', email = '$email_novo' WHERE id = '$id'";
+
+        if($conexao->query($sql) == TRUE) {
+            echo json_encode([
+                'mensagem' => 'ALUNO ATUALIZADO COM SUCESSO'
+            ]);
+        }
+        else {
+            echo json_encode([
+                'mensagem' => 'ERRO NA ATUALIZAÇÃO DO ALUNO'
+            ]);
+        }
+    }
+
+    function remove_aluno(){
+        global $conexao;
+        $input = json_decode(file_get_contents('php://input'), true);
+        $id = $input['id'];
+        $sql = "DELETE FROM alunos WHERE id = '$id'";
+        if($conexao->query($sql) == TRUE){
+            echo json_encode([
+                'mensagem' => 'ALUNO REMOVIDO COM SUCESSO'
+            ]);
+        }
+        else {
+            echo json_encode([
+                'mensagem' => 'ERRO NA REMOÇÃO DO ALUNO'
+            ]);
+        }
+    }
+
+    function remove_curso(){
+        global $conexao;
+        $input = json_decode(file_get_contents('php://input'), true);
+        $id = $input['id_curso'];
+        $sql = "DELETE FROM cursos WHERE id = '$id_curso'";
+        if($conexao->query($sql) == TRUE){
+            echo json_encode([
+                'mensagem' => 'CURSO REMOVIDO COM SUCESSO'
+            ]);
+        }
+        else {
+            echo json_encode([
+                'mensagem' => 'ERRO NA REMOÇÃO DO CURSO'
+            ]);
+        }
+    }
+
+    
+    
+    
+
 
 
 ?>
